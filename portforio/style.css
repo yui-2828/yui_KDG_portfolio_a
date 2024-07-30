@@ -1,0 +1,176 @@
+body{
+    background: plum;
+}
+
+.fade-up{
+    animation: fade-up 1s forwards;
+    opacity: 0;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    transition-duration: 1000ms;
+    transition-property: opacity, transform;
+    transform: translate(0,50px);
+}
+.fadeIn.scrollin {
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.fv h1::before{
+    content: "あ";
+    display: inline-block;
+}
+
+.about{
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.about-img{
+    width: 48%;
+    aspect-ratio: 56/45;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-caption{
+    width: 48%;
+    padding-top: 40px;
+}
+.about-name{
+    font-size: 40px;
+}
+.about-job{
+    margin-top: 4px;
+    font-size: 24px;
+}
+.about-text{
+    margin-top: 24px;
+    font-size: 18px;
+}
+.sns{
+    display: flex;
+    margin-top: 24px;
+     gap: 8px;
+}
+
+
+.skill{
+    width: 90%;
+    max-width: 1200px;
+    margin: 120px auto 0;
+    text-align: center;
+}
+
+.skill h2{
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 900;
+    color: #9c49aa;
+}
+
+.skill-content{
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.skill-item{
+    width: 23%;
+    margin-bottom: 1%;
+}
+
+.skill-item img{
+    width: 100%;
+    aspect-ratio: 29/18;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.skill-item span{
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+
+.works{
+    padding-top: 200px;
+}
+
+.works-title{
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+    font-size: 24px;
+    letter-spacing: .15em;
+}
+
+.works-title::before{
+    content: "Works";
+    display: inline-block;
+    font-size: 160px;
+    font-weight: 900;
+    line-height: 1;
+    color: #9c49aa;
+    position: absolute;
+    bottom: 5%;
+    left: -20%;
+    z-index: -1;
+    opacity: .3;
+}
+
+.works li{
+    list-style: none;
+}
+
+.works-list{
+    margin-top: 60px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4px 8px;
+}
+
+.works-list li img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+
+
+
+/* スマホ版 */
+
+@media screen and (max-width: 768px) {
+    .about {
+      flex-direction: column;
+    }
+    .about-img{
+      width: 100%;
+    }
+    .about-caption{
+      width: 100%;
+    }
+  }
+

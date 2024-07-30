@@ -1,0 +1,155 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 10000;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+  }
+  
+  
+  
+  #gnav_btn {
+    position: absolute;
+    width: 100px;
+    height: 52px;
+    top: 40px;
+    right: 50px;
+    z-index: 10000;
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border: 1px solid #333;
+    border-radius: 50px;
+  }
+  #gnav_btn span {
+    display: inline-block;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    position: absolute;
+    left: 30px;
+    height: 3px;
+    background-color: #333;
+    width: 40%;
+  }
+  #gnav_btn span:nth-of-type(1) {
+    top: 15px;
+  }
+  #gnav_btn span:nth-of-type(2) {
+    top: 23px;
+  }
+  #gnav_btn span:nth-of-type(3) {
+    top: 31px;
+  }
+  #gnav_btn:hover {
+    background-color: rgba(229, 121, 197, 0.36);
+    border-color: #000000;
+  }
+  #gnav_btn:hover span {
+    background: #000000;
+  }
+  #gnav_btn.open {
+    border: 1px solid #000000;
+  }
+  #gnav_btn.open span {
+    background: #000000;
+  }
+  #gnav_btn.open span:nth-of-type(1) {
+    top: 18px;
+    left: 32px;
+    -webkit-transform: translateY(6px) rotate(-45deg);
+            transform: translateY(6px) rotate(-45deg);
+    width: 35%;
+  }
+  #gnav_btn.open span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #gnav_btn.open span:nth-of-type(3) {
+    top: 30px;
+    left: 32px;
+    -webkit-transform: translateY(-6px) rotate(45deg);
+            transform: translateY(-6px) rotate(45deg);
+    width: 35%;
+  }
+  #gnav_btn.open:hover span {
+    background: #000000;
+  }
+  
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    overflow-y: scroll;
+    color: #fff;
+    height: 100%;
+  }
+  nav::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  nav.background01::before {
+    background: url(img/類くん.jpg) no-repeat center center / cover;
+  }
+  
+  nav.background02::before {
+    background: url(img/Screenshot_20231207-224252.png) no-repeat center center / cover;
+  }
+
+  nav.background03::before {
+    background: url(img/Screenshot_20240310-122255.png) no-repeat center center / cover;
+  }
+
+  nav.background04::before {
+    background: url(img/Screenshot_20240310-122345.png) no-repeat center center / cover;
+  }
+
+  nav.background05::before {
+    background: url(img/Screenshot_20240522-193136.png) no-repeat center center / cover;
+  }
+
+  nav.background06::before {
+    background: url(img/Screenshot_20240501-203218.png) no-repeat center center / cover;
+  }
+  
+  nav::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #645b5b;
+    opacity: 0.7;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  
+  .header-nav {
+    position: relative;
+    z-index: 1;
+    width: 82%;
+    max-width: 1000px;
+    margin: 160px auto 0;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+  }
+  
+  .header-nav a{
+    color: #fff;
+  }
+  
+  .header-nav a:hover{
+    color: #ae67a9;
+  }
